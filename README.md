@@ -4,6 +4,10 @@ This repo holds the beginning of an FBP implementation in Go
 
 *As of 2 Oct., 2021, all test cases working*
 
+However, you have to rename `detection_test.go` so that it doesn't get picked up instead of `gofbp_test.go` .  If someone could tell me how to manage these test cases, it would appreciated.   
+
+By the way, the comment in `gofbp_test.go` (last test case) stating that ""Deadlock detection does not work at the moment." is not strictly true - Go detects the deadlock fine - it's just that it fails the whole test suite!  I hope to improve the diagnostics here as well!
+
 Features include:
 
 - delayed start of goroutines (FBP processes), unless `MustRun` attribute is specified or the process has no non-IIP inputs (same as JavaFBP delayed start feature) 
